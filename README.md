@@ -1,2 +1,1 @@
-# datalab-python-docker-microservice
-Datalab Python Docker Microservice
+# Google Container Engine Skeleton Service
