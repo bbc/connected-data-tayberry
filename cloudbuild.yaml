@@ -1,8 +1,8 @@
 steps:
-  - name: "eu.gcr.io/datalab/python"
-    args: ["install", "github.com/betandr/datalab-python-docker-microservice"]
-    env: ["PROJECT_ROOT=github.com/betandr/datalab-python-docker-microservice"]
-  - name: "gcr.io/datalab/python"
-    args: ["build", "-t", "gcr.io/datalab-python-docker-microservice/datalab-service:$REVISION_ID", "-f", "Dockerfile", "."]
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/bbc/datalab-python-container-microservice']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/datalab-service:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/datalab-python-docker-microservice/datalab-service:$REVISION_ID"
+  - "gcr.io/$PROJECT_ID/datalab-service:$REVISION_ID"
+  

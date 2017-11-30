@@ -1,15 +1,16 @@
-FROM python:3.6.3
+FROM ubuntu:latest
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
+RUN apt-get update -y && \
+    apt-get install -y python-pip python-dev
 
-COPY requirements.txt /usr/src/app
+COPY ./requirements.txt /app/requirements.txt
 
-RUN apt-get update && \
-    pip install --upgrade pip && pip install -r requirements.txt
+WORKDIR /app
 
-COPY . /usr/src/app
+RUN pip install -r requirements.txt
 
-EXPOSE 5000
+COPY . /app
 
-CMD ["python", "./main.py" ]
+ENTRYPOINT [ "python" ]
+
+CMD [ "app.py" ]
