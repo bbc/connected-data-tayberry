@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
     if request.method == 'GET':
-        return "Hello, Datalab!"
+        return "Hello, World?"
 
     return 'OK', 200
 
