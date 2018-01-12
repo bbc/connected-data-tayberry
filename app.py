@@ -11,7 +11,6 @@ app = Flask(__name__)
 def index():
     if request.method == 'GET':
         return "Hello, World!"
-
     return 'OK', 200
 
 @app.errorhandler(500)
