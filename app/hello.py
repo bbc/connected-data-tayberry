@@ -9,9 +9,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    if request.method == 'GET':
-        return "Hello, World!"
-    return 'OK', 200
+    return "Hello, World!", 200
 
 @app.errorhandler(500)
 def server_error(e):
