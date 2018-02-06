@@ -3,13 +3,16 @@ import json
 import logging
 import os
 
-from flask import current_app, Flask, render_template, request
+from flask import current_app, Flask, render_template, request, jsonify
+
+from domain import root
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return "Hello, World!", 200
+    res = root.obj
+    return jsonify(res)
 
 @app.errorhandler(500)
 def server_error(e):
