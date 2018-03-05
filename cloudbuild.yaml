@@ -4,4 +4,4 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ["build", "-t", "gcr.io/$PROJECT_ID/tayberry:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/$PROJECT_ID/datalab-microservice:$REVISION_ID"
+  - "gcr.io/$PROJECT_ID/tayberry:$REVISION_ID"
