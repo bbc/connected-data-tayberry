@@ -3,12 +3,12 @@ import json
 import os
 import pytest
 
-import hello
+import tayberry
 
 @pytest.fixture
 def client():
-    hello.app.testing = True
-    return hello.app.test_client()
+    tayberry.app.testing = True
+    return tayberry.app.test_client()
 
 def test_index(client):
     r = client.get('/')
