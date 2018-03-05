@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER Beth Anderson <felix.mercermoss@bbc.co.uk>
+MAINTAINER Felix Mercer Moss <felix.mercermoss@bbc.co.uk>
 
 ENV DEBIAN_FRONTEND noninteractive
 
