@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/git'
-    args: ['clone', 'https://github.com/bbc/datalab-python-container-microservice']
+    args: ['clone', 'git@github.com:bbc/connected-data-tayberry.git']
   - name: 'gcr.io/cloud-builders/docker'
     args: ["build", "-t", "gcr.io/$PROJECT_ID/datalab-microservice:$REVISION_ID", "-f", "Dockerfile", "."]
 images:
