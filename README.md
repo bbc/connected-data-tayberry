@@ -16,7 +16,7 @@ pip3 install -r requirements.txt
 python3 app/tayberry.py
 ```
 
-3. Visit the application at http://localhost:5000.
+3. Visit the application at http://localhost:5005.
 
 ## Tests
 Run tests using:
